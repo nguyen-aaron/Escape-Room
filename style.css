@@ -1,0 +1,81 @@
+#main {
+  max-width: 512px;
+}
+
+#logo {
+  padding-bottom: 3rem;  
+}
+
+#easter-image {
+  padding-bottom: 3rem;  
+}
+
+#restart {
+  padding-top: 2rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+#key .button {
+  background-color: rgb(247, 247, 247);
+}
+
+body:not([data-state="locked"]) #start-button,
+body:not([data-state="clue-1"]) #clue-1,
+body:not([data-state="key"]) #key,
+body:not([data-state="clue-2"]) #clue-2,
+body:not([data-state="clue-3"]) #clue-3,
+body:not([data-state="unlocked"]) #secret,
+body[data-state="easter-egg"] #logo,
+body:not([data-state="easter-egg"]) #easter-image,
+body[data-state="unlocked"] #lock {
+  display: none;
+}
+
+#penguins img {
+  height: 200px;
+  width: 200px;
+}
+
+body[data-state="unlocked"]{
+  background-color: lightblue;
+}
+
+#start-button {
+  padding: 10px 14px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  transition: all ease-in-out .5s;
+}
+
+#start-button:hover {
+  border: 1px solid transparent;
+  color: transparent;
+  background-color: transparent;
+}
+
+#easter-egg {
+  margin-top: 75px;
+  display: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  color: transparent;
+  background-color: transparent;
+  transition: all ease-in-out .5s;
+}
+
+#easter-egg:hover {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}

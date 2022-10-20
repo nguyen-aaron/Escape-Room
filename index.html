@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escape The Room!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+
+  <body data-state="locked">
+    <section id="lock" class="hero is-fullheight has-background-black">
+      <div class="hero-body">
+        <div id="main-body" class="container">
+          <figure id="logo" class="image center">
+            <img
+              id="main"
+              src="data:image/png;base64,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"
+              alt="Escape The Room"
+            />
+          </figure>
+          <div class="container center">
+            <button id="start-button"><b>Enter...</b></button>
+          </div>
+          <div class="container center">
+            <button id="easter-egg"><b>Welcome to the Exclusive Club....</b></button>
+          </div>
+          <div id="clue-1" class="container">
+            <p class="center has-text-light">
+              <b>What</b>&nbsp;is the password
+            </p>
+          </div>
+          <div id="key" class="container center">
+            <button class="button">
+              <img
+                class="image small"
+                src="key.png"
+                alt="key"
+              />
+            </button>
+          </div>
+          <div id="clue-2" class="container">
+            <p class="center has-text-light">
+              What do you put in a box to make it lighter?
+            </p>
+          </div>
+          <div id="clue-3" class="container">
+            <p class="center has-text-light">
+              What color is the sky?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="secret">
+      <figure class="image center">
+        <img id="main"
+          src="https://media4.giphy.com/media/3orieQHmkjxSiLGC08/giphy.gif"
+          alt="You Escaped!">       
+      </figure>
+      <figure class="image center" id="penguins">
+        <img id="main"
+          src="https://c.tenor.com/ddoJlzp3hSEAAAAM/club-penguin-penguin.gif"
+          alt="You Escaped!">
+        <img id="main"
+          src="https://c.tenor.com/iWHmxL5_ltAAAAAd/club-penguin-dance.gif"
+          alt="You Escaped!">
+        <img id="main"
+          src="https://i.pinimg.com/originals/58/24/dc/5824dcc972593733f8d316ae623f0733.gif"
+          alt="You Escaped!">
+      </figure>
+      <div id="restart" class=center>
+        <button>Try Again</button>
+      </div>
+    </section>
+    <section id="easter-image">
+    <p>:)</p>
+    </section>
+  </body>
+</html>
